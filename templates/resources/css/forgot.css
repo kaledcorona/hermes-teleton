@@ -1,0 +1,236 @@
+/* CSS configurations written by: kaco*/
+
+/*Global configurations*/
+
+body{
+    /* Display size configurations*/
+    min-width:    375px;
+    height:       auto;
+    max-height:   1080px;
+    
+    /* Font configurations*/
+    font-family: 'sans-serif', sans-serif;
+
+    /* Background color*/
+    background: var(--primary-DEFAULT) none repeat scroll 0% 0%;
+
+    /*Color theme*/
+    --primary-DEFAULT:      #fbfdfe;
+    --secondary-color:      #EEC900;
+    --terciary-color:       #0f1419;
+    --primary-text:         #0f1419;
+    --primary-text-light:   #6c6c6c;  
+  
+  }
+  
+  /* Font parameters*/
+  h1,h2,h3{
+    font-weight: 720;
+    color: var(--primary-text)
+  }
+
+  
+  h4,h5{
+    font-weight: 500;
+    color: var(--primary-text)
+}
+
+.w3-col.m8{
+  width: 63.7% !important;
+}
+
+.w3-twothird{
+  width: 55.7% !important;
+}
+
+.w3-third {
+  width: 44.3% !important;
+}
+
+.w3-threequarter {
+  width: 70%  !important;
+}
+
+.w3-quarter {
+  width: 30% !important;
+}
+
+.ayellow {
+  color: var(--terciary-color);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/*Menu configurations*/
+
+.main-box {
+  padding-bottom: 0vh;
+}
+
+/* Left image*/
+
+.logo-box{
+  position: relative;
+  width: 1040px;
+  height: 100%;
+}
+
+.logo-menu-box{
+  position: relative;
+  bottom: 0vh;
+  left: 8vw;
+}
+
+#main-img {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+
+}
+
+
+#right-img {
+  position: relative;
+  max-width: 100%;
+  width: 20vw;
+  height: auto;
+}
+
+#right-img-box {
+  position: relative;
+  padding-right: 0px !important;
+  height: auto;
+}
+
+/* Right part: login box*/
+
+.main-menu-box {
+  position: relative;
+  padding-right: 0px;
+  width: 30vw;
+}
+
+.menu-box{
+  position: relative;
+  height: 100%;
+  top: 12vh;
+  right: 1vw;
+}
+
+.all-right {
+  position: relative;
+  height: 90vh;
+  width: 40vw;
+  max-height: 90vh;
+  padding-right: 0px !important;
+}
+
+.login-box{
+  position: relative;
+  width: 22vw;
+  top: 5vh;
+  left: 4vw;
+}
+
+#nosotros-text {
+    position: relative;
+    top: 3vh;
+}
+
+
+.display-topright{
+  position: absolute;
+  right: 0px;
+  bottom: 540px;
+}
+
+.menu-msg-style{
+  font-size: 2.3vw;
+  font-weight: 700;
+}
+.scnd-msg {
+  font-weight: 500;
+}
+
+#user_id {
+  position: relative;
+  right: 1vw;
+}
+
+#password_id {
+  position: relative;
+  right: 1vw;
+  margin-bottom: 1vh;
+}
+
+#id_remember {
+  position: relative;
+  right: 0vw;
+}
+
+.remember-login-box {
+  position: relative;
+  right: 5.0vw;
+}
+
+#submitBtn {
+  position: relative;
+  right: 1vw;
+}
+
+.button-style{
+  background-color: var(--secondary-color) !important;
+  width: 320px;
+}
+
+.register-box{
+  position: relative;
+  width: 22vw;
+  height: 7vh;
+  margin-top: 30px;
+}
+
+.register-msg{
+  position: relative;
+  top: 2vh;
+}
+
+#rpasswd {
+  position: relative;
+  bottom: 1vh;
+}
+
+
+.passwd-reset-box{
+  position: relative;
+  top: 2vh;
+}
+
+#empty_rect {
+  position: fixed;
+  background-color: #fbfdfe;
+  width: 13vw;
+  height: 7vh;
+  top: 86vh;
+  z-index: 2;
+
+}
+
+/* Footer configurations*/
+
+.footer-box{
+  position: relative;
+  height: 5vh;
+  top: 0vh;
+  padding-left: 200px;
+  padding-right: 200px;
+  background-color: #efefef;
+}
+
+.link-footer {
+  position: relative;
+  top: 14px;
+  font-size: 75%;
+  text-decoration: none;
+  font-weight: 600;
+} 

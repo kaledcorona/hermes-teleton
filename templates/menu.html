@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es" class="h-100">
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="DIGITAL SIGN, TELETON, VERIFY DOCUMENTS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web-base multi digital signature tool">
+    <meta name="author" content="Kaco">
+    <base href="./resources/" target="_top">
+
+
+    <!-- CSS style -->
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link rel="stylesheet" type="text/css" href="css/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Favicons-->
+    <link rel="icon" href="static/icons/teleton-31x26.png" sizes="32x32" type="image/png">
+    <meta name="theme-color" content="#7952b3">
+
+    <!-- Javascript-->
+    <style>
+        .mySlides {display:none;}
+    </style>
+    
+    <!-- Title -->
+    <title>Hermes - menu</title>
+</head>
+
+
+<body class="w3-cell-row bodybox">
+    <!-- Sidebar hidden on small screens -->
+    <nav class="w3-sidebar w3-cell w3-bar-block w3-small w3-hide-small w3-center w3-light-gray">
+        <!-- Logo image in top left corner -->
+        <div class="profile-img-box w3-container">
+            <img id="profile-img" src="static/icons/hermes.png" alt="Teleton logo yellow" style="width: 100%;">
+        </div>
+        <a href="/menu/herramientas"  id="mainbtn" class="w3-bar-item w3-button w3-padding-large w3-yellow w3-padding-16" >
+            <i class="fa w3-xxlarge"></i>
+            <p>Herramientas</p>
+        </a>
+        <a href="../menu.html#mydocs"  id="docsbtn" class="w3-bar-item w3-button w3-padding-large w3-hover-yellow">
+            <i class="fa w3-xxlarge"></i>
+            <p>Mis documentos</p>
+        </a>
+        <a href="../menu.html#myshares" id="sharesbtn" class="w3-bar-item w3-button w3-padding-large w3-hover-yellow">
+            <i class="fa w3-xxlarge"></i>
+            <p>Compartido</p>
+        </a>
+        <a href="../menu.html#myactivity" id="actbtn" class="w3-bar-item w3-button w3-padding-large w3-hover-yellow">
+            <i class="fa w3-xxlarge"></i>
+            <p>Actividad</p>
+        </a>
+        <a href="../menu.html#myannounces" id="newsbtn" class="w3-bar-item w3-button w3-padding-large w3-hover-yellow">
+            <i class="fa w3-xxlarge"></i>
+            <p>Comunicados</p>
+        </a>
+        <a href="/logout" class="w3-bar-item w3-button w3-padding-large w3-hover-yellow">
+            <i class="fa w3-xxlarge"></i>
+            <p>Cerrar sesion</p>
+        </a>
+    </nav>
+
+    <!-- Navbar on small screens (Hidden on Medium and large screens) -->
+    <nav class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+        <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+            <a href="#" class="w3-bar-item w3-button" style="width: 24% !important;">Documentos</a>
+            <a href="#" class="w3-bar-item w3-button" style="width: 22% !important;">Compartido</a>
+            <a href="#" class="w3-bar-item w3-button" style="width: 20% !important;">Actividad</a>
+            <a href="#" class="w3-bar-item w3-button" style="width: 20% !important;">Comunicados</a>
+            <a href="#" class="w3-bar-item w3-button" style="width: 14% !important;">Salir</a>
+        </div>
+    </nav>
+
+    <!-- Page content -->
+    <div class="w3-padding-large w3-row " id="main">
+        <!-- Firmar -->
+        <header class="w3-padding-32 w3-center w3-container w3-half" id="home">
+            <div class="w3-container w3-center w3-padding-16" id="firmar-box">
+                <h3 class="w3-xxlarge">Firmar</h3>
+                <form action="/menu/firmar" method="post" enctype="multipart/form-data">
+                    <div class="w3-row">
+                        <div class="w3-cell w3-container">
+                            <div class="w3-card-4 w3-button w3-round-large">
+                                <label for="gfile">Seleccione el archivo</label>
+                                <i class="fa w3-jumbo"></i>
+                                <div class="w3-container w3-center">
+                                    <input type="file" id="gfile" name="gfile"><br><br>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="w3-cell w3-container contrasena-cell">
+                            <label for="gpassword1">Ingrese su contrasena</label><br>
+                            <input type="text" id="gpassword1" name="gpsswd1"><br>
+                            <input href="/menu/firmar" class="w3-xxlarge w3-round-xlarge w3-yellow w3-margin-top " type="submit" value="Submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="verificar-box" class="w3-container w3-center w3-padding-16">
+                <h3 class="w3-xxlarge">Verificar</h3>
+                <form action="/menu/verificar" method="post" enctype="multipart/form-data">
+                    <div class="w3-row">
+                        <div class="w3-cell w3-container">
+                            <div class="w3-card-4 w3-button w3-round-large">
+                                <label for="vfile">Seleccione el archivo a verificar</label>
+                                <i class="fa w3-jumbo"></i>
+                                <div class="w3-container w3-center">
+                                    <input type="file" id="vfile" name="vfile"><br><br>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="w3-cell w3-container contrasena-cell">
+                            <label for="gpassword2">Ingrese su contrasena</label><br>
+                            <input type="text" id="gpassword2" name="gpsswd2"><br>
+                            <input class="w3-xxlarge w3-round-xlarge w3-yellow w3-margin-top " type="submit" value="Submit">
+                        </div>
+                    </div>
+                </form>
+            </div>          
+        </header>
+        <section class="w3-row w3-padding-32" id="mydocs">
+            <div class="w3-container w3-padding-16 mydocs-box">
+                <div class="w3-container w3-center w3-padding-16" id="qwe">
+                    <div class="w3-container">
+                        <h3 class="w3-xxlarge w3-opacity">Documentos</h3>
+                    </div>
+                    <div class="w3-container">
+                        <div class="w3-cellrow w3-padding-16 row-width">
+                            <div class="w3-card-4 w3-cell w3-quarter w3-button w3-round-large">
+                                <i class="fa w3-jumbo"></i>
+                                <div class="w3-container w3-center">
+                                  <p>Finanzas</p>
+                                </div>
+                            </div> 
+                            <div class="w3-card-4 w3-cell w3-quarter w3-button w3-round-large">
+                                <i class="fa w3-jumbo"></i>
+                                <div class="w3-container w3-center">
+                                  <p>Contabilidad2022.pdf</p>
+                                </div>
+                            </div> 
+                            <div class="w3-card-4 w3-cell w3-quarter w3-button w3-round-large">
+                                <i class="fa w3-jumbo"></i>
+                                <div class="w3-container w3-center">
+                                  <p>Saldo</p>
+                                </div>
+                            </div>
+                            <div class="w3-card-4 w3-cell w3-quarter w3-button w3-round-large">
+                                <i class="fa w3-jumbo"></i>
+                                <div class="w3-container w3-center">
+                                  <p>Recetas</p>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="w3-cellrow w3-padding-16 row-width">
+                            <div class="w3-card-4 w3-cell w3-quarter w3-button w3-round-large">
+                                <i class="fa w3-jumbo"></i>
+                                <div class="w3-container w3-center">
+                                  <p>Fotos</p>
+                                </div>
+                            </div> 
+                            <div class="w3-card-4 w3-cell w3-quarter w3-button w3-round-large">
+                                <i class="fa w3-jumbo"></i>
+                                <div class="w3-container w3-center">
+                                  <p>Facturas</p>
+                                </div>
+                            </div> 
+                            <div class="w3-card-4 w3-cell w3-quarter w3-button w3-round-large">
+                                <i class="fa w3-jumbo"></i>
+                                <div class="w3-container w3-center">
+                                  <p>Publicidad</p>
+                                </div>
+                            </div>
+                            <div class="w3-card-4 w3-cell w3-quarter w3-button w3-round-large">
+                                <i class="fa w3-jumbo"></i>
+                                <div class="w3-container w3-center">
+                                  <p>Estados de cuenta01.pdf</p>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="w3-cellrow w3-padding-16 row-width">
+                            <div class="w3-card-4 w3-cell w3-quarter w3-button w3-round-large">
+                                <i class="fa w3-jumbo"></i>
+                                <div class="w3-container w3-center">
+                                  <p>Dedicibles</p>
+                                </div>
+                            </div> 
+                            <div class="w3-card-4 w3-cell w3-quarter w3-button w3-round-large">
+                                <i class="fa w3-jumbo"></i>
+                                <div class="w3-container w3-center">
+                                  <p>PDFs</p>
+                                </div>
+                            </div> 
+                            <div class="w3-card-4 w3-cell w3-quarter w3-button w3-round-large">
+                                <i class="fa w3-jumbo"></i>
+                                <div class="w3-container w3-center">
+                                  <p>Informes2022.pdf</p>
+                                </div>
+                            </div>
+                            <div class="w3-card-4 w3-cell w3-quarter w3-button w3-round-large">
+                                <i class="fa w3-jumbo"></i>
+                                <div class="w3-container w3-center">
+                                  <p>Extra2</p>
+                                </div>
+                            </div> 
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="w3-row w3-padding-32" id="myshares">
+            <div class="w3-container w3-center w3-padding-16" id="share-box">
+                <h3 class="w3-xxlarge w3-opacity ">Compartido</h3>
+            </div>
+            <div class="w3-container w3-center" id="share-content">
+                <div class="w3-cellrow w3-padding-16 row-width">
+                    <div class="w3-card-4 w3-cell w3-quarter w3-button w3-round-large">
+                        <i class="fa w3-jumbo"></i>
+                        <div class="w3-container w3-center">
+                          <p>Finanzas</p>
+                        </div>
+                    </div> 
+                    <div class="w3-card-4 w3-cell w3-quarter w3-button w3-round-large">
+                        <i class="fa w3-jumbo"></i>
+                        <div class="w3-container w3-center">
+                          <p>Contabilidad2022.pdf</p>
+                        </div>
+                    </div> 
+                    <div class="w3-card-4 w3-cell w3-quarter w3-button w3-round-large">
+                        <i class="fa w3-jumbo"></i>
+                        <div class="w3-container w3-center">
+                          <p>Saldo</p>
+                        </div>
+                    </div>
+                    <div class="w3-card-4 w3-cell w3-quarter w3-button w3-round-large">
+                        <i class="fa w3-jumbo"></i>
+                        <div class="w3-container w3-center">
+                          <p>Recetas</p>
+                        </div>
+                    </div> 
+                </div>
+                <div class="w3-cellrow w3-padding-16 row-width">
+                    <div class="w3-card-4 w3-cell w3-quarter w3-button w3-round-large">
+                        <i class="fa w3-jumbo"></i>
+                        <div class="w3-container w3-center">
+                          <p>Fotos</p>
+                        </div>
+                    </div> 
+                    <div class="w3-card-4 w3-cell w3-quarter w3-button w3-round-large">
+                        <i class="fa w3-jumbo"></i>
+                        <div class="w3-container w3-center">
+                          <p>Facturas</p>
+                        </div>
+                    </div> 
+                    <div class="w3-card-4 w3-cell w3-quarter w3-button w3-round-large">
+                        <i class="fa w3-jumbo"></i>
+                        <div class="w3-container w3-center">
+                          <p>Publicidad</p>
+                        </div>
+                    </div>
+                    <div class="w3-card-4 w3-cell w3-quarter w3-button w3-round-large">
+                        <i class="fa w3-jumbo"></i>
+                        <div class="w3-container w3-center">
+                          <p>Estados de cuenta01.pdf</p>
+                        </div>
+                    </div> 
+                </div>
+                <div class="w3-cellrow w3-padding-16 row-width">
+                    <div class="w3-card-4 w3-cell w3-quarter w3-button w3-round-large">
+                        <i class="fa w3-jumbo"></i>
+                        <div class="w3-container w3-center">
+                          <p>Dedicibles</p>
+                        </div>
+                    </div> 
+                    <div class="w3-card-4 w3-cell w3-quarter w3-button w3-round-large">
+                        <i class="fa w3-jumbo"></i>
+                        <div class="w3-container w3-center">
+                          <p>PDFs</p>
+                        </div>
+                    </div> 
+                    <div class="w3-card-4 w3-cell w3-quarter w3-button w3-round-large">
+                        <i class="fa w3-jumbo"></i>
+                        <div class="w3-container w3-center">
+                          <p>Informes2022.pdf</p>
+                        </div>
+                    </div>
+                    <div class="w3-card-4 w3-cell w3-quarter w3-button w3-round-large">
+                        <i class="fa w3-jumbo"></i>
+                        <div class="w3-container w3-center">
+                          <p>Extra2</p>
+                        </div>
+                    </div> 
+                </div>
+                
+            </div>
+        </section>
+        <section class="w3-row w3-padding-32" id="myactivity">
+            <div class="w3-container w3-center w3-padding-16" id="activity-box">
+                <div class="w3-container">
+                    <h3 class="w3-xxlarge w3-opacity">Actividad</h3>
+                </div>
+                <div class="w3-container">
+                    <table class="w3-table-all">
+                        <tr>
+                            <th>Nombre del documento</th>
+                            <th>Accion</th>
+                            <th>Compartido</th>
+                            <th>Fecha y hora</th>
+                        </tr>
+                        <tr>
+                            <td>Informes2022.pdf</td>
+                            <td>Firmar</td>
+                            <td>None</td>
+                            <td>2022-05-02 22:09:30</td>
+                        </tr>
+                        <tr>
+                            <td>Estados de cuenta01.pdf</td>
+                            <td>Firmar</td>
+                            <td>None</td>
+                            <td>2022-95-25 21:23:30</td>
+                        </tr>
+                        <tr>
+                            <td>Contabilidad2022.pdf</td>
+                            <td>Verificar</td>
+                            <td>None</td>
+                            <td>2022-04-12 20:09:30</td>
+                        </tr>
+                        <tr>
+                            <td>EstadosCocina12.pdf</td>
+                            <td>Firmar</td>
+                            <td>Jorge Finanzas</td>
+                            <td>2022-04-08 19:23:30</td>
+                        </tr>
+                          <tr>
+                            <td>AbarrotesJuanito.pdf</td>
+                            <td>Firmar</td>
+                            <td>Alberto Cocina </td>
+                            <td>2022-04-02 18:43:12</td>
+                        </tr>
+                          <tr>
+                            <td>Informes2021.pdf</td>
+                            <td>Firmar</td>
+                            <td>None</td>
+                            <td>2022-03-02 05:32:50</td>
+                        </tr>
+                      </table>
+                </div>
+            </div>
+        </section>
+        <section class="w3-row w3-padding-32" id="myannounces">
+            <div class="w3-container w3-center w3-padding-16" id="myannounces-box">
+                <h3 class="w3-xxlarge w3-opacity">Comunicados</h3>
+                <div class="w3-content w3-display-container">
+                    <img class="mySlides" src="dynamic/img/anuncio1.png" style="width:100%">
+                    <img class="mySlides" src="dynamic/img/anuncio2.png" style="width:100%">
+                    <img class="mySlides" src="dynamic/img/anuncio3.png" style="width:100%">
+                    <img class="mySlides" src="dynamic/img/anuncio4.png" style="width:100%">
+                    <img class="mySlides" src="dynamic/img/anuncio5.png" style="width:100%">
+                </div>
+                <script>
+                    var myIndex = 0;
+                    carousel();
+
+                    function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";  
+                    }
+                    myIndex++;
+                    if (myIndex > x.length) {myIndex = 1}    
+                    x[myIndex-1].style.display = "block";  
+                    setTimeout(carousel, 3000); // Change image every 2 seconds
+                    }
+                </script>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

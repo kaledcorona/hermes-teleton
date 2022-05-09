@@ -1,0 +1,175 @@
+/* CSS configurations written by: kaco*/
+
+/*Global configurations*/
+
+body {
+    /* Font configurations*/
+    font-family: 'sans-serif', sans-serif;
+
+    /* Background Image */
+    background-image: url("../static/img/menu-background.png");
+    background-color: var(--primary-DEFAULT);
+
+    /*Color theme*/
+    --primary-DEFAULT: #fbfdfe;
+    --secondary-color: #EEC900;
+    --terciary-color: #0f1419;
+    --primary-text: #0f1419;
+    --primary-text-light: #6c6c6c;
+
+}
+
+/* Font parameters*/
+h1,
+h2,
+h3 {
+    font-weight: 720;
+    color: var(--primary-text)
+}
+
+h4,
+h5 {
+    font-weight: 500;
+    color: var(--primary-text)
+}
+
+.w3-row-padding img {
+    margin-bottom: 12px;
+}
+
+.w3-sidebar {
+    width: 120px;
+}
+
+#main {
+    margin-left: 120px;
+}
+
+#profile-img {
+    position: relative;
+    margin-bottom: 5vh;
+    margin-top: 2vh;
+}
+
+
+#home {
+    position: absolute;
+    left: 24vw;
+    top: 20vh;
+    width: 60vw;
+    padding-right: 5vw;
+    padding-left: 5vw;
+}
+
+#mydocs {
+    position: relative;
+    top: 103vh;
+    height: 100vh;
+}
+
+.mydocs-box {
+    position: absolute;
+    width: 65vw;
+    top: 18vh;
+    left: 15vw;
+    height: 60vh;
+}
+
+#myshares {
+    position: relative;
+    top: 113vh;
+    height: 100vh;
+}
+
+#share-box {
+    position: relative;
+    width: 65vw;
+    height: 70vh;
+    left: 15vw;
+    top: 12vh;
+}
+
+#share-content {
+    position: relative;
+    left: 17vw;
+    bottom: 48vh;
+    width: 60vw;
+}
+
+#myactivity {
+    position: relative;
+    top: 110vh;
+    height: 100vh;
+}
+
+#activity-box {
+    position: relative;
+    top: 0vh;
+    width: 65vw;
+    height: 70vh;
+    left: 15vw;
+}
+
+#myannounces {
+    position: relative;
+    top: 116vh;
+    height: 100vh;
+}
+
+#myannounces-box {
+    position: relative;
+    width: 57vw;
+    height: 58vh;
+    top: 15vh;
+    left: 20vw;
+}
+
+.row-width {
+    position: relative;
+    width: 57.6vw;
+    height: 19vh;
+}
+
+
+.contrasena-cell {
+    position: relative;
+    left: 10vw;
+}
+.cell-margin {
+    margin-right: 0.1vh;
+}
+
+@media only screen and (max-width:1940px) {
+    body {
+
+        /* Background Image */
+        /*background-image: url("../static/img/menu-background.png");*/
+        background-color: var(--secondary-color) !important;
+
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    /*Remove margins from the page content on small screens*/
+    #main {
+        margin-left: 0px;
+    }
+
+    .menu-box {
+        position: relative;
+        width: 100%;
+
+    }
+
+    .login-box {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .register-box {
+        height: 2vh;
+    }
+
+}

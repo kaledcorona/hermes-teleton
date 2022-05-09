@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es" class="h-100">
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="DIGITAL SIGN, TELETON, VERIFY DOCUMENTS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web-base multi digital signature tool">
+    <meta name="author" content="Kaco">
+    <base href="./resources/" target="_parent">
+
+
+    <!-- CSS style -->
+    <link rel="stylesheet" type="text/css" href="css/about.css">
+    <link rel="stylesheet" type="text/css" href="css/w3.css">
+
+    <!-- Favicons-->
+    <link rel="icon" href="static/icons/teleton-31x26.png" sizes="32x32" type="image/png">
+    <meta name="theme-color" content="#7952b3">
+    
+    <!-- Title -->
+    <title>Hermes - nosotros</title>
+</head>
+
+
+<body class="w3-cell-row">
+    <script src="./js/myscript.js"></script>
+    <!-- All upper part of web (hiddes when small devices)-->
+    <main class="main-box w3-row w3-hide-small" role="main" id="main">
+        <!-- Left image-->
+        <div class="main-image-box w3-padding-32 w3-twothird w3-container" style="padding-left: 0px; padding-top: 0px !important;">
+            <div class="logo-box ">
+                <img id="main-img" src="static/img/nodemap2.png" alt="Hermes main picture: A modern art" >
+            </div>
+        </div>
+
+        <!-- Login menu-->
+        <div class="main-menu-box w3-container all-right w3-third w3-center w3-display-container">
+            <div class="w3-row">
+                <div class="menu-box w3-container w3-cell w3-threequarter">
+                    <div class="header-menu">
+                        <div class="logo-menu-box">
+                            <img id="img-logo" src="static/icons/hermes-logo.png" alt="Hermes main picture: A modern art" >
+                        </div>
+                    </div>
+                    <div class="menu-text-box w3-container">
+                        <div class="main-msg">
+                            <h1 class="menu-msg-style w3-yellow">La firma del manaña</h1>
+                        </div>
+                        <div class="scnd-msg-box w3-right">
+                            <h3 class="scnd-msg">Protege con Hermes</h3>
+                        </div>
+                    </div>
+                    <!-- Login box-->
+                    <div class="login-box w3-light-grey w3-padding-16 w3-round-large w3-container">
+                        <div class="header-login-box">
+                            <div class="header-msg-box">
+                                <h3 id="tregistro"> Nosotros</h3>
+                            </div>
+                        </div>
+                        <p class="w3-right-align" id="nosotros-text">
+                            Hermes es un proyecto desarrollado por estudiantes del Tecnológico de Monterrey campus Guadalajara
+                            en colaboración con la asociación Teletón para cubrir las necesidades de firmar y verificar múltiples documentos
+                             (pdf, excel, etc..) de una manera rápida y sencilla.
+                        </p>
+                    </div>
+                </div>
+                <div class="w3-cell w3-quarter logo-box" id="right-img-box">
+                    <div id="empty_rect">
+
+                    </div>
+                    <img id="right-img" src="static/img/nodemap-r.png" alt="Node map" >
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- Lower bar menu-->
+    <footer class=" w3-container footer-box w3-row w3-hide-small w3-center">
+        <div class="w3-cell w3-quarter">
+            <a class="link-footer w3-opacity w3-disabled" href="../about.html">Acerca</a> 
+        </div>
+        <div class="w3-cell w3-quarter">
+            <a  class="link-footer w3-opacity" href="../help.html">Ayuda</a> 
+        </div>
+        <div class="w3-cell w3-half w3-right">
+            <p class="w3-opacity" style="font-size: 70%; position: relative; bottom: 1.3vh; font-weight: 600;"> Disenada por Kaco@TecdeMonterrey</p>
+        </div>
+    </footer>
+
+    <!--All upper part of web (hiddes when large and medium devices)-->
+    <main class="main-box_mobile w3-row w3-hide-medium w3-hide-large" role="main" id="main_mobile">
+        <!-- Navbar on small screens (Hidden on Medium and large screens) -->
+        <nav class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+            <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+                <a href="#" class="w3-bar-item w3-button" style="width: 20% !important;"><img src="static/icons/teleton-31x26.png" id="img-logo-nav"></a>
+                <a href="#" class="w3-bar-item w3-button" style="width: 26% !important;">Registro</a>
+                <a href="#" class="w3-bar-item w3-button" style="width: 27% !important;  position: relative; right: 2vw;">Recuperar</a>
+                <a href="#" class="w3-bar-item w3-button" id="recuperar_nav" style="width: 27% !important; position: relative; right: 6vw;">Acerca</a>
+            </div>
+        </nav>
+        <!-- Login menu-->
+        <div class="main-menu-box w3-container w3-third w3-center w3-padding-64 w3-display-container">
+            <div class="menu-box w3-cell">
+                <div class="header-menu">
+                    <div class="logo-menu-box w3-middle">
+                        <img id="img-logo" src="static/icons/teleton-100x84.png" alt="Teleton logo yellow" >
+                    </div>
+                </div>
+                <!-- Login box-->
+                <div class="login-box w3-light-grey w3-padding-16">
+                    <div class="header-login-box">
+                        <div class="header-msg-box">
+                            <h4> Inicio de sesión</h4>
+                        </div>
+                    </div>
+                    <form class="login-box" method="post" action="/accounts/login/">
+                        <div class="user-login-box"> 
+                          <!-- Username input-->
+                            <label for="user"> Usuario:</label>
+                            <input type="text" id="user_id" name="user" placeholder="Usuario" autocomplete="on" maxlength="150" required="">
+                        </div>
+                        <div class="pass-login-box">
+                          <!-- Password box for sign-in -->
+                          <p>
+                            <label for="password">Constraseña:</label>
+                            <input class="holder-pass" type="password" name="password" placeholder="Password" autocomplete="off" required="" id="password_id">
+                          </p>
+                        </div>
+                        <div class="remember-login-box w3-padding-16">
+                          <!-- Remember button for sign-in next time -->
+                            <label for="id_remember">Remember Me:</label>
+                            <input type="checkbox" name="remember" id="id_remember">      
+                        </div>
+                      </form>
+                      <div class="login-button-box w3-container w3-padding-32 w3-light-grey">
+                        <button href="../menu.html" class="w3-btn button-style w3-round-xxlarge w3-xlarge">Entrar</button>
+                    </div>
+                    </div>
+                    
+
+                    <!-- Registro-->
+                    <div class="register-box w3-container w3-cell-row w3-light-grey w3-cell-row w3-center w3-display-container">
+                        <div class="register-msg w3-half ">
+                            <a href="#" class="ayellow" >Registrarme</a>
+                        </div>
+                        <div class="passwd-reset-box w3-container w3-half">
+                            <a href="#" class="ayellow" >Recuperar contrasena</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
